@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08F8615118BED82E00B1B350 /* ResultadoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F8615018BED82E00B1B350 /* ResultadoViewController.m */; };
 		81EC79F318BC2416003C05EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EC79F218BC2416003C05EA /* Foundation.framework */; };
 		81EC79F518BC2416003C05EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EC79F418BC2416003C05EA /* CoreGraphics.framework */; };
 		81EC79F718BC2416003C05EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EC79F618BC2416003C05EA /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08F8614F18BED82E00B1B350 /* ResultadoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadoViewController.h; sourceTree = "<group>"; };
+		08F8615018BED82E00B1B350 /* ResultadoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadoViewController.m; sourceTree = "<group>"; };
 		81EC79EF18BC2416003C05EA /* IBActionAppGrupo10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IBActionAppGrupo10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EC79F218BC2416003C05EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81EC79F418BC2416003C05EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,7 +57,7 @@
 		81EC7A1918BC2417003C05EA /* IBActionAppGrupo10Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IBActionAppGrupo10Tests-Info.plist"; sourceTree = "<group>"; };
 		81EC7A1B18BC2417003C05EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		81EC7A1D18BC2417003C05EA /* IBActionAppGrupo10Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBActionAppGrupo10Tests.m; sourceTree = "<group>"; };
-		81EC7A2718BC37D8003C05EA /* ChanchaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanchaTableViewController.h; sourceTree = "<group>"; };
+		81EC7A2718BC37D8003C05EA /* ChanchoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanchoTableViewController.h; sourceTree = "<group>"; };
 		81EC7A2818BC37D8003C05EA /* ChanchaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChanchaTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,8 +122,10 @@
 				81EC7A0218BC2417003C05EA /* AppDelegate.m */,
 				81EC7A0418BC2417003C05EA /* Main.storyboard */,
 				81EC7A0718BC2417003C05EA /* ViewController.h */,
-				81EC7A2718BC37D8003C05EA /* ChanchaTableViewController.h */,
+				81EC7A2718BC37D8003C05EA /* ChanchoTableViewController.h */,
 				81EC7A2818BC37D8003C05EA /* ChanchaTableViewController.m */,
+				08F8614F18BED82E00B1B350 /* ResultadoViewController.h */,
+				08F8615018BED82E00B1B350 /* ResultadoViewController.m */,
 				81EC7A0818BC2417003C05EA /* ViewController.m */,
 				81EC7A0A18BC2417003C05EA /* Images.xcassets */,
 				81EC79F918BC2416003C05EA /* Supporting Files */,
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81EC7A2918BC37D8003C05EA /* ChanchaTableViewController.m in Sources */,
+				08F8615118BED82E00B1B350 /* ResultadoViewController.m in Sources */,
 				81EC7A0918BC2417003C05EA /* ViewController.m in Sources */,
 				81EC7A0318BC2417003C05EA /* AppDelegate.m in Sources */,
 				81EC79FF18BC2416003C05EA /* main.m in Sources */,
@@ -466,6 +472,7 @@
 				81EC7A2318BC2417003C05EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81EC7A2418BC2417003C05EA /* Build configuration list for PBXNativeTarget "IBActionAppGrupo10Tests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +481,7 @@
 				81EC7A2618BC2417003C05EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
