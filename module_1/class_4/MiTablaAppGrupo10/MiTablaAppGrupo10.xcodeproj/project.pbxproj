@@ -22,6 +22,8 @@
 		08F8618818BEDFF400B1B350 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08F8618618BEDFF400B1B350 /* InfoPlist.strings */; };
 		08F8618A18BEDFF400B1B350 /* MiTablaAppGrupo10Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F8618918BEDFF400B1B350 /* MiTablaAppGrupo10Tests.m */; };
 		08F8619518BEE24200B1B350 /* MiTablaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F8619418BEE24200B1B350 /* MiTablaViewController.m */; };
+		08F8619818C168AA00B1B350 /* ContactoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F8619718C168AA00B1B350 /* ContactoCell.m */; };
+		08F8619B18C1779500B1B350 /* MiTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F8619A18C1779500B1B350 /* MiTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		08F8618918BEDFF400B1B350 /* MiTablaAppGrupo10Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiTablaAppGrupo10Tests.m; sourceTree = "<group>"; };
 		08F8619318BEE24200B1B350 /* MiTablaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiTablaViewController.h; sourceTree = "<group>"; };
 		08F8619418BEE24200B1B350 /* MiTablaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiTablaViewController.m; sourceTree = "<group>"; };
+		08F8619618C168AA00B1B350 /* ContactoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactoCell.h; sourceTree = "<group>"; };
+		08F8619718C168AA00B1B350 /* ContactoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactoCell.m; sourceTree = "<group>"; };
+		08F8619918C1779500B1B350 /* MiTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiTabBarController.h; sourceTree = "<group>"; };
+		08F8619A18C1779500B1B350 /* MiTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,10 @@
 				08F8617318BEDFF400B1B350 /* ViewController.h */,
 				08F8619318BEE24200B1B350 /* MiTablaViewController.h */,
 				08F8619418BEE24200B1B350 /* MiTablaViewController.m */,
+				08F8619918C1779500B1B350 /* MiTabBarController.h */,
+				08F8619A18C1779500B1B350 /* MiTabBarController.m */,
+				08F8619618C168AA00B1B350 /* ContactoCell.h */,
+				08F8619718C168AA00B1B350 /* ContactoCell.m */,
 				08F8617418BEDFF400B1B350 /* ViewController.m */,
 				08F8617618BEDFF400B1B350 /* Images.xcassets */,
 				08F8616518BEDFF400B1B350 /* Supporting Files */,
@@ -255,9 +265,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				08F8617518BEDFF400B1B350 /* ViewController.m in Sources */,
+				08F8619B18C1779500B1B350 /* MiTabBarController.m in Sources */,
 				08F8616F18BEDFF400B1B350 /* AppDelegate.m in Sources */,
 				08F8616B18BEDFF400B1B350 /* main.m in Sources */,
 				08F8619518BEE24200B1B350 /* MiTablaViewController.m in Sources */,
+				08F8619818C168AA00B1B350 /* ContactoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

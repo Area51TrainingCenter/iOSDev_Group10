@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface MiTablaViewController : UITableViewController
-
+{
+    NSArray *misContactos;
+    
+    //NS -> NextStep
+    // UI -> UIKit
+}
 @end

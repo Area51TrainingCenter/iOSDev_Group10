@@ -7,6 +7,8 @@
 //
 
 #import "MiTablaViewController.h"
+#import "ContactoCell.h"
+#import "MiTabBarController.h"
 
 @interface MiTablaViewController ()
 
@@ -31,8 +33,58 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // self.navigationItem.rightBarButtonItem =
+    
+    /*
+    //Manera 1
+    misContactos = [NSArray arrayWithObjects:@"Fabiola",@"Stephanie", @"Chuck", @"Clint",@"Bugs", nil];
+     */
+    /*
+    self.navigationController;
+    self.tabBarController;
+    */
+     
+    //Manera 2
+    misContactos = @[@"Miley Cyrus",@"Stephanie Cayo", @"Chuck Norris", @"Clint Eastwood",@"Bugs Bunny"];
+    
+    //Universo Paralelo
+    /*
+    [NSNumber numberWithInt:0];
+    
+    misContactos = @[@0,@30,@4,@5];
+     */
+    
+    NSMutableArray *soyMu = [NSMutableArray array];
 }
+
+- (IBAction)switchCambio:(UISwitch *)sender {
+    
+    //Aca hacemos:
+    //1. Identificamos de qué fila se trata
+    //2. Metemos/sacamos acorde al valor del switch
+    
+    int indiceContacto = sender.tag;
+    
+    sender.isOn;
+    
+    MiTabBarController *miTab = (MiTabBarController *)self.tabBarController;
+    
+    if (sender.isOn) {
+        <#statements#>
+    }
+    else
+    {
+        
+    }
+    
+    NSString *stringJulia =@"Julia Roberts";
+    
+    [miTab.misFavoritos addObject:stringJulia];
+    [miTab.misFavoritos removeObject:@"Julia Roberts"];
+    
+    //[self.tableView reloadData];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -44,24 +96,28 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5000;
+    //IMPORTANTE: Si el arreglo es nil, .count
+    
+    return misContactos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"miCelda";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    ContactoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
+    NSString *contactoActual = misContactos[indexPath.row]; //[misContactos objectAtIndex:0];
+    cell.nombreContactoLabel.text = contactoActual;
+    cell.favoritoSwitch.tag = indexPath.row;
+    
     
     return cell;
 }
