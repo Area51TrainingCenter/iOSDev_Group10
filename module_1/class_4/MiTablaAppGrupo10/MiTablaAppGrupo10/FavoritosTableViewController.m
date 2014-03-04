@@ -1,20 +1,19 @@
 //
-//  MiTablaViewController.m
+//  FavoritosTableViewController.m
 //  MiTablaAppGrupo10
 //
-//  Created by Diego Cruz on 26/02/14.
+//  Created by Diego Cruz on 3/03/14.
 //  Copyright (c) 2014 Diego Cruz. All rights reserved.
 //
 
-#import "MiTablaViewController.h"
-#import "ContactoCell.h"
+#import "FavoritosTableViewController.h"
 #import "MiTabBarController.h"
 
-@interface MiTablaViewController ()
+@interface FavoritosTableViewController ()
 
 @end
 
-@implementation MiTablaViewController
+@implementation FavoritosTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,46 +32,20 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem =
-    
-    /*
-    //Manera 1
-    misContactos = [NSArray arrayWithObjects:@"Fabiola",@"Stephanie", @"Chuck", @"Clint",@"Bugs", nil];
-     */
-    /*
-    self.navigationController;
-    self.tabBarController;
-    */
-     
-    //Manera 2
-    misContactos = @[@"Miley Cyrus",@"Stephanie Cayo", @"Chuck Norris", @"Clint Eastwood",@"Bugs Bunny"];
-    
-    //Universo Paralelo
-    /*
-    [NSNumber numberWithInt:0];
-    
-    misContactos = @[@0,@30,@4,@5];
-     */
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 }
 
-- (IBAction)switchCambio:(UISwitch *)sender {
-    
-    //Aca hacemos:
-    //1. Identificamos de qué fila se trata
-    //2. Metemos/sacamos acorde al valor del switch
-    
-    int indiceContacto = sender.tag;
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    //1. Lleno/Actualizo misFavoritos
+    //2. Actualizo la tabla
     
     MiTabBarController *miTab = (MiTabBarController *)self.tabBarController;
+    misFavoritos = miTab.misFavoritos;
     
-    if (sender.isOn) {
-        [miTab.misFavoritos addObject:misContactos[indiceContacto]];
-    }
-    else
-    {
-        [miTab.misFavoritos removeObject:misContactos[indiceContacto]];
-    }
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,22 +65,16 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    //IMPORTANTE: Si el arreglo es nil, .count
-    
-    return misContactos.count;
+    return misFavoritos.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"miCelda";
-    ContactoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"favoritoCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSString *contactoActual = misContactos[indexPath.row]; //[misContactos objectAtIndex:0];
-    cell.nombreContactoLabel.text = contactoActual;
-    cell.favoritoSwitch.tag = indexPath.row;
-    
-    [cell viewWithTag:102];
+    cell.textLabel.text = misFavoritos[indexPath.row];
     
     return cell;
 }

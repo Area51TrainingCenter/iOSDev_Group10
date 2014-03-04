@@ -1,20 +1,19 @@
 //
-//  MiTablaViewController.m
-//  MiTablaAppGrupo10
+//  MisNotasTableViewController.m
+//  MITablaNotasApp
 //
-//  Created by Diego Cruz on 26/02/14.
+//  Created by Diego Cruz on 3/03/14.
 //  Copyright (c) 2014 Diego Cruz. All rights reserved.
 //
 
-#import "MiTablaViewController.h"
-#import "ContactoCell.h"
-#import "MiTabBarController.h"
+#import "MisNotasTableViewController.h"
+#import "NotaCell.h"
 
-@interface MiTablaViewController ()
+@interface MisNotasTableViewController ()
 
 @end
 
-@implementation MiTablaViewController
+@implementation MisNotasTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,46 +32,23 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem =
+    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    
+    //1. Creen el arreglo
+    // El arreglo NO tiene que estar vacio
+    // @"" x n veces (siendo n el numero de filas de la tabla)
+    misNotas = [NSMutableArray array];
+    
     
     /*
-    //Manera 1
-    misContactos = [NSArray arrayWithObjects:@"Fabiola",@"Stephanie", @"Chuck", @"Clint",@"Bugs", nil];
-     */
-    /*
-    self.navigationController;
-    self.tabBarController;
-    */
-     
-    //Manera 2
-    misContactos = @[@"Miley Cyrus",@"Stephanie Cayo", @"Chuck Norris", @"Clint Eastwood",@"Bugs Bunny"];
-    
-    //Universo Paralelo
-    /*
-    [NSNumber numberWithInt:0];
-    
-    misContactos = @[@0,@30,@4,@5];
-     */
-    
-}
+    for (NSString *soyNota in misNotas) {
 
-- (IBAction)switchCambio:(UISwitch *)sender {
-    
-    //Aca hacemos:
-    //1. Identificamos de qué fila se trata
-    //2. Metemos/sacamos acorde al valor del switch
-    
-    int indiceContacto = sender.tag;
-    
-    MiTabBarController *miTab = (MiTabBarController *)self.tabBarController;
-    
-    if (sender.isOn) {
-        [miTab.misFavoritos addObject:misContactos[indiceContacto]];
     }
-    else
-    {
-        [miTab.misFavoritos removeObject:misContactos[indiceContacto]];
-    }
+     */
+    /*
+    [misNotas containsObject:@"PIkachu"];
+    [misNotas indexOfObject:@"PIkachu"];*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,67 +65,99 @@
     return 1;
 }
 
+
+- (IBAction)seApretoAnhadirNota:(UIBarButtonItem *)sender {
+    
+    //1. Modificar la data
+    //2. Modificas la tabla (NO Reload)
+    
+    [self.tableView beginUpdates];
+        [misNotas addObject:@""];
+    
+        NSIndexPath *nuevoIndexPath = [NSIndexPath indexPathForRow:misNotas.count-1 inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[nuevoIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    [self.tableView endUpdates];
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    //IMPORTANTE: Si el arreglo es nil, .count
+    return misNotas.count;
+}
+- (IBAction)miTextFieldCambio:(UITextField *)sender {
     
-    return misContactos.count;
+    //1. Identificar a qué fila pertece
+    //2. Modificar el item de esa fila
+    int indice = sender.tag;
+    misNotas[indice] = sender.text;
+    
+    //[misNotas replaceObjectAtIndex:indice withObject:sender.text];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"miCelda";
-    ContactoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    NotaCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    NSString *contactoActual = misContactos[indexPath.row]; //[misContactos objectAtIndex:0];
-    cell.nombreContactoLabel.text = contactoActual;
-    cell.favoritoSwitch.tag = indexPath.row;
-    
-    [cell viewWithTag:102];
+    cell.miTextField.text = misNotas[indexPath.row];
+    cell.miTextField.tag = indexPath.row;
     
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
+    
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
         // Delete the row from the data source
+        [misNotas removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
-/*
+
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    //1. Actualizamos la data
+    
+    NSString *notaMovida = misNotas[fromIndexPath.row];
+    //Lo eliminamos de su posicion actual
+    //Y lo reinsertamos en la nueva posicion
+    
+    [misNotas removeObjectAtIndex:fromIndexPath.row];
+    [misNotas insertObject:notaMovida atIndex:toIndexPath.row];
 }
-*/
 
-/*
+
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
+    
     return YES;
 }
-*/
+
 
 /*
 #pragma mark - Navigation

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cOJ-uD-q6o">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--Mis Notas Table View Controller - Mis Notas-->
+        <scene sceneID="fkk-Wl-2nJ">
+            <objects>
+                <tableViewController id="puo-dw-tsC" customClass="MisNotasTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="vdb-Mg-gyT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="qnu-59-PN9" customClass="NotaCell">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qnu-59-PN9" id="Vxu-KP-PYF">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Esribe una nota" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpv-Hv-12z">
+                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="miTextFieldCambio:" destination="puo-dw-tsC" eventType="editingChanged" id="GT0-aJ-ykj"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="cpv-Hv-12z" secondAttribute="bottom" id="68j-gf-y2i"/>
+                                        <constraint firstItem="cpv-Hv-12z" firstAttribute="top" secondItem="Vxu-KP-PYF" secondAttribute="top" id="7Pw-FR-nHN"/>
+                                        <constraint firstAttribute="trailing" secondItem="cpv-Hv-12z" secondAttribute="trailing" constant="15" id="af0-5d-a6P"/>
+                                        <constraint firstItem="cpv-Hv-12z" firstAttribute="leading" secondItem="Vxu-KP-PYF" secondAttribute="leading" constant="15" id="oue-7I-ain"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="miTextField" destination="cpv-Hv-12z" id="xp1-JC-fWK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mis Notas" id="FmO-CT-HP3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EXW-CQ-Um2">
+                            <connections>
+                                <action selector="seApretoAnhadirNota:" destination="puo-dw-tsC" id="79K-fR-oPc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sMx-ah-YC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="52"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gOa-dN-J1f">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="cOJ-uD-q6o" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rga-8f-HhE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="puo-dw-tsC" kind="relationship" relationship="rootViewController" id="RbK-rU-pMC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ipu-Vv-naS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193" y="52"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

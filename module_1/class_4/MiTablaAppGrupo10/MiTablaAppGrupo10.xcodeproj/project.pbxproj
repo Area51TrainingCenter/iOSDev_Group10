@@ -24,6 +24,7 @@
 		08F8619518BEE24200B1B350 /* MiTablaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F8619418BEE24200B1B350 /* MiTablaViewController.m */; };
 		08F8619818C168AA00B1B350 /* ContactoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F8619718C168AA00B1B350 /* ContactoCell.m */; };
 		08F8619B18C1779500B1B350 /* MiTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F8619A18C1779500B1B350 /* MiTabBarController.m */; };
+		08F8619E18C554A400B1B350 /* FavoritosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F8619D18C554A400B1B350 /* FavoritosTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		08F8619718C168AA00B1B350 /* ContactoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactoCell.m; sourceTree = "<group>"; };
 		08F8619918C1779500B1B350 /* MiTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiTabBarController.h; sourceTree = "<group>"; };
 		08F8619A18C1779500B1B350 /* MiTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiTabBarController.m; sourceTree = "<group>"; };
+		08F8619C18C554A400B1B350 /* FavoritosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritosTableViewController.h; sourceTree = "<group>"; };
+		08F8619D18C554A400B1B350 /* FavoritosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritosTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				08F8619318BEE24200B1B350 /* MiTablaViewController.h */,
 				08F8619418BEE24200B1B350 /* MiTablaViewController.m */,
 				08F8619918C1779500B1B350 /* MiTabBarController.h */,
+				08F8619C18C554A400B1B350 /* FavoritosTableViewController.h */,
+				08F8619D18C554A400B1B350 /* FavoritosTableViewController.m */,
 				08F8619A18C1779500B1B350 /* MiTabBarController.m */,
 				08F8619618C168AA00B1B350 /* ContactoCell.h */,
 				08F8619718C168AA00B1B350 /* ContactoCell.m */,
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F8619E18C554A400B1B350 /* FavoritosTableViewController.m in Sources */,
 				08F8617518BEDFF400B1B350 /* ViewController.m in Sources */,
 				08F8619B18C1779500B1B350 /* MiTabBarController.m in Sources */,
 				08F8616F18BEDFF400B1B350 /* AppDelegate.m in Sources */,
