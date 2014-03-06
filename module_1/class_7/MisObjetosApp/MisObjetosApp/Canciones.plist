@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titulo</key>
+		<string>Eye of The Tiger</string>
+		<key>nombreArtista</key>
+		<string>Rocky</string>
+		<key>duracion</key>
+		<integer>158</integer>
+		<key>albumCover</key>
+		<string>cover4.jpg</string>
+	</dict>
+	<dict>
+		<key>titulo</key>
+		<string>I Kissed a Girl</string>
+		<key>nombreArtista</key>
+		<string>Katy Perry</string>
+		<key>duracion</key>
+		<integer>139</integer>
+		<key>albumCover</key>
+		<string>cover2.jpg</string>
+	</dict>
+	<dict>
+		<key>titulo</key>
+		<string>We Are The Champions</string>
+		<key>nombreArtista</key>
+		<string>Queen</string>
+		<key>duracion</key>
+		<integer>168</integer>
+		<key>albumCover</key>
+		<string>cover3.jpg</string>
+	</dict>
+	<dict>
+		<key>titulo</key>
+		<string>Payasito</string>
+		<key>nombreArtista</key>
+		<string>Parchis</string>
+		<key>duracion</key>
+		<integer>170</integer>
+		<key>albumCover</key>
+		<string>cover4.jpg</string>
+	</dict>
+	<dict>
+		<key>titulo</key>
+		<string>Get Lucky</string>
+		<key>nombreArtista</key>
+		<string>Daft Punk</string>
+		<key>duracion</key>
+		<integer>120</integer>
+		<key>albumCover</key>
+		<string>cover1.jpg</string>
+	</dict>
+</array>
+</plist>

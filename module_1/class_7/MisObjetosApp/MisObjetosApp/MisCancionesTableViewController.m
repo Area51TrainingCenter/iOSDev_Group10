@@ -1,19 +1,20 @@
 //
-//  MisNotasTableViewController.m
-//  MITablaNotasApp
+//  MisCancionesTableViewController.m
+//  MisObjetosApp
 //
-//  Created by Diego Cruz on 3/03/14.
+//  Created by Diego Cruz on 5/03/14.
 //  Copyright (c) 2014 Diego Cruz. All rights reserved.
 //
 
-#import "MisNotasTableViewController.h"
-#import "NotaCell.h"
+#import "MisCancionesTableViewController.h"
+#import "CancionCell.h"
+#import "Cancion.h"
 
-@interface MisNotasTableViewController ()
+@interface MisCancionesTableViewController ()
 
 @end
 
-@implementation MisNotasTableViewController
+@implementation MisCancionesTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,24 +33,33 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    //self.tableView.editing = YES;
+    //Aqui creamos y llenamos el arreglo de canciones
+    canciones = [NSMutableArray array];
     
-    //1. Creen el arreglo
-    // El arreglo NO tiene que estar vacio
-    // @"" x n veces (siendo n el numero de filas de la tabla)
-    misNotas = [NSMutableArray array];
+    //Aqui llenamos canciones con el .plist
+    //0. Obtengo el .plist
+    //1. Meto el contenido del plist en un arreglo
+    //2. Por cada item, creo una Cancion y lo meto al arreglo
     
+    NSString *pathCanciones = [[NSBundle mainBundle] pathForResource:@"Canciones" ofType:@"plist"];
+    NSArray *cancionesEnPlist = [NSArray arrayWithContentsOfFile:pathCanciones];
     
-    /*
-    for (NSString *soyNota in misNotas) {
-
+    for (NSDictionary *soyCancionPlist in cancionesEnPlist) {
+        
+        Cancion *nuevaCancion = [[Cancion alloc] init];
+        
+        //
+        nuevaCancion.titulo = soyCancionPlist[@"titulo"];
+        nuevaCancion.nombreArtista = soyCancionPlist[@"nombreArtista"];
+        nuevaCancion.duracion = soyCancionPlist[@"duracion"];
+        nuevaCancion.albumCover = [UIImage imageNamed:soyCancionPlist[@"albumCover"]];
+        //
+        
+        [canciones addObject:nuevaCancion];
     }
-     */
-    /*
-    [misNotas containsObject:@"PIkachu"];
-    [misNotas indexOfObject:@"PIkachu"];*/
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,101 +76,72 @@
     return 1;
 }
 
-
-- (IBAction)seApretoAnhadirNota:(UIBarButtonItem *)sender {
-    
-    //1. Modificar la data
-    //2. Modificas la tabla (NO Reload)
-    
-    [self.tableView beginUpdates];
-        [misNotas addObject:@""];
-    
-        NSIndexPath *nuevoIndexPath = [NSIndexPath indexPathForRow:misNotas.count-1 inSection:0];
-        [self.tableView insertRowsAtIndexPaths:@[nuevoIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    
-    [self.tableView endUpdates];
-}
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return misNotas.count;
-}
-- (IBAction)miTextFieldCambio:(UITextField *)sender {
-    
-    //1. Identificar a qué fila pertece
-    //2. Modificar el item de esa fila
-    int indice = sender.tag;
-    misNotas[indice] = sender.text;
-    
-    //[misNotas replaceObjectAtIndex:indice withObject:sender.text];
+    return canciones.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    NotaCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"cancionCell";
+    CancionCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.miTextField.text = misNotas[indexPath.row];
-    cell.miTextField.tag = indexPath.row;
+    // ??
+    
+    Cancion *soyCancion = canciones[indexPath.row];
+    
+    int minutos = soyCancion.duracion.intValue / 60;
+    int segundos = soyCancion.duracion.intValue % 60;
+    
+    cell.tituloLabel.text = soyCancion.titulo;
+    cell.artistaLabel.text = soyCancion.nombreArtista;
+    cell.albumCoverView.image = soyCancion.albumCover;
+    
+    cell.duracionLabel.text = [NSString stringWithFormat:@"%02d:%02d",minutos,segundos];
     
     return cell;
 }
 
-
+/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    
     return YES;
 }
+*/
 
-
-
+/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
         // Delete the row from the data source
-        [misNotas removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
+*/
 
-
-
+/*
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
-    //1. Actualizamos la data
-    
-    NSString *notaMovida = misNotas[fromIndexPath.row];
-    //Lo eliminamos de su posicion actual
-    //Y lo reinsertamos en la nueva posicion
-    
-    [misNotas removeObjectAtIndex:fromIndexPath.row];
-    [misNotas insertObject:notaMovida atIndex:toIndexPath.row];
-    
-
 }
+*/
 
-
-
+/*
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
-    
     return YES;
 }
-
+*/
 
 /*
 #pragma mark - Navigation
@@ -173,5 +154,10 @@
 }
 
  */
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [self.tableView indexPathForSelectedRow];
+}
 
 @end
