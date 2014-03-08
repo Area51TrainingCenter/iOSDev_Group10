@@ -9,6 +9,7 @@
 #import "MisCancionesTableViewController.h"
 #import "CancionCell.h"
 #import "Cancion.h"
+#import "DetalleCancionTableViewController.h"
 
 @interface MisCancionesTableViewController ()
 
@@ -23,6 +24,12 @@
         // Custom initialization
     }
     return self;
+}
+
+-(void)NuevaCancionSeGuardo:(Cancion *)nuevaCancion
+{
+    //1. Metemos nuevaCancion al arreglo
+    //2. Recargamos la tabla
 }
 
 - (void)viewDidLoad
@@ -92,15 +99,11 @@
     
     Cancion *soyCancion = canciones[indexPath.row];
     
-    int minutos = soyCancion.duracion.intValue / 60;
-    int segundos = soyCancion.duracion.intValue % 60;
-    
     cell.tituloLabel.text = soyCancion.titulo;
     cell.artistaLabel.text = soyCancion.nombreArtista;
     cell.albumCoverView.image = soyCancion.albumCover;
     
-    cell.duracionLabel.text = [NSString stringWithFormat:@"%02d:%02d",minutos,segundos];
-    
+    cell.duracionLabel.text = [soyCancion obtenerDuracionFormateada];
     return cell;
 }
 
@@ -157,7 +160,27 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [self.tableView indexPathForSelectedRow];
+    //1. La escena destino
+    //2. La canción seleccionada
+    
+    
+    if ([segue
+        .identifier isEqualToString:@"detalleSegue"]) {
+        DetalleCancionTableViewController *detalleDestino = segue.destinationViewController;
+        
+        Cancion* cancionSeleccionada =canciones[[self.tableView indexPathForSelectedRow].row];
+        
+        detalleDestino.miCancion = cancionSeleccionada;
+    }
+    else
+    {
+        
+        UINavigationController *navNueva = segue.destinationViewController;
+        NuevaCancionTableViewController *nuevaEscena = navNueva.viewControllers[0];
+        
+        nuevaEscena.miDelegado = self;
+    }
+    
 }
 
 @end

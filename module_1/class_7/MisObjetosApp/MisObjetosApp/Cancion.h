@@ -15,4 +15,7 @@
 @property (strong,nonatomic) NSNumber *duracion;
 @property (strong,nonatomic) UIImage *albumCover;
 
+-(NSString *)obtenerDuracionFormateada;
+
 @end
+

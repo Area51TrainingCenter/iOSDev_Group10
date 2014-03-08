@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NuevaCancionTableViewController.h"
 
-@interface MisCancionesTableViewController : UITableViewController
+@interface MisCancionesTableViewController : UITableViewController <NuevaCancionDelegate>
 {
     NSMutableArray *canciones;
 }
