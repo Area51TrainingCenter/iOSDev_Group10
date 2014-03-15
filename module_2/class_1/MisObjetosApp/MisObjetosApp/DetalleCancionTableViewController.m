@@ -44,6 +44,8 @@
     self.title = self.miCancion.titulo;
     self.duracionLabel.text = [self.miCancion obtenerDuracionFormateada];
     self.generoLabel.text = self.miCancion.nombreGenero;
+    
+    UISegmentedControl *miSegmented;
 }
 
 
