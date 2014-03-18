@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vx0-vX-Rf7">
+                                <rect key="frame" x="59" y="77" width="80" height="73"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UmQ-GC-hgs" appends="YES" id="UWt-F5-3pD"/>
+                                    <outletCollection property="gestureRecognizers" destination="w9Y-Vl-rnP" appends="YES" id="ce0-fB-ScW"/>
+                                    <outletCollection property="gestureRecognizers" destination="dx8-V0-KuL" appends="YES" id="bPx-bH-IZF"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9e-um-ag3">
+                                <rect key="frame" x="200" y="149" width="80" height="73"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WKr-3W-Iui" appends="YES" id="GYa-Ld-fi7"/>
+                                    <outletCollection property="gestureRecognizers" destination="twN-q0-1Bo" appends="YES" id="czp-Hm-eaA"/>
+                                    <outletCollection property="gestureRecognizers" destination="A3H-MV-4D9" appends="YES" id="34d-0n-rA4"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-cf-dU2">
+                                <rect key="frame" x="115" y="274" width="80" height="73"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="a7p-Z2-EPp" appends="YES" id="RSz-Nm-jwv"/>
+                                    <outletCollection property="gestureRecognizers" destination="MDV-vd-C2d" appends="YES" id="o3P-lU-pgl"/>
+                                    <outletCollection property="gestureRecognizers" destination="lol-IX-Nov" appends="YES" id="hGd-5D-m3R"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="21A-43-UcW" appends="YES" id="jii-7s-0xm"/>
+                            <outletCollection property="gestureRecognizers" destination="0Gg-i7-135" appends="YES" id="Sop-Tb-SKW"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="0Gg-i7-135">
+                    <connections>
+                        <action selector="seHizoDobleTap:" destination="vXZ-lx-hvc" id="ogy-rp-xIU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="21A-43-UcW">
+                    <connections>
+                        <action selector="seHizoTap:" destination="vXZ-lx-hvc" id="AHw-Ji-c61"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UmQ-GC-hgs" userLabel="view1Recognizer">
+                    <connections>
+                        <action selector="seHizoTap:" destination="vXZ-lx-hvc" id="Tsu-ur-dKJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WKr-3W-Iui">
+                    <connections>
+                        <action selector="seHizoTap:" destination="vXZ-lx-hvc" id="dHr-uC-aJT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="a7p-Z2-EPp">
+                    <connections>
+                        <action selector="seHizoTap:" destination="vXZ-lx-hvc" id="OCU-xD-H4U"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="w9Y-Vl-rnP" userLabel="pan1">
+                    <connections>
+                        <action selector="seEstaHaciendoPan:" destination="vXZ-lx-hvc" id="DNb-Fz-bcZ"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="twN-q0-1Bo" userLabel="pan2">
+                    <connections>
+                        <action selector="seEstaHaciendoPan:" destination="vXZ-lx-hvc" id="FSW-zS-PsD"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="MDV-vd-C2d" userLabel="pan3">
+                    <connections>
+                        <action selector="seEstaHaciendoPan:" destination="vXZ-lx-hvc" id="Oxv-jV-nSJ"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="dx8-V0-KuL" userLabel="pinch1">
+                    <connections>
+                        <action selector="seEstaHaciendoPinch:" destination="vXZ-lx-hvc" id="MF9-YG-hR0"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="A3H-MV-4D9" userLabel="pinch2">
+                    <connections>
+                        <action selector="seEstaHaciendoPinch:" destination="vXZ-lx-hvc" id="Wce-BS-oFe"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <pinchGestureRecognizer id="lol-IX-Nov" userLabel="pinch3">
+                    <connections>
+                        <action selector="seEstaHaciendoPinch:" destination="vXZ-lx-hvc" id="0GC-SB-gw3"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
