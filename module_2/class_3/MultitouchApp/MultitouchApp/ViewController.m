@@ -69,9 +69,13 @@
 
 - (IBAction)seEstaHaciendoPinch:(UIPinchGestureRecognizer *)sender {
     
-    sender.scale;
+    CALayer *miLayer = sender.view.layer;
     
     //Le aplico el scale a las dimensiones del view
+    // El width y el height tienen que ser afectados por el scale
+    
+    miLayer.transform = CATransform3DMakeScale(sender.scale, sender.scale, 1);
+    
     
 }
 
