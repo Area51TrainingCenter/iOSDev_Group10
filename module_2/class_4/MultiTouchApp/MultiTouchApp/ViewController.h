@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate,UIActionSheetDelegate>
-
+{
+    CGPoint puntoInicial;
+    
+    float escalaActual;
+    float rotationActual;
+}
 @end

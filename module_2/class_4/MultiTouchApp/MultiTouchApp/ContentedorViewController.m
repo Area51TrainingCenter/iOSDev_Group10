@@ -36,13 +36,42 @@
     CGPoint translacion = [sender translationInView:self.view];
     
     CGPoint nuevoPoint = centerLayer.position;
+    
     //
     nuevoPoint.x += translacion.x;
     //
     
+    int superX =self.view.layer.position.x;
+    
+    if (nuevoPoint.x >= superX) {
+        self.leftMenuView.alpha = 1;
+        self.rightMenuView.alpha = 0;
+        
+        int topeDerecha = superX+self.leftMenuView.frame.size.width;
+        
+        if (nuevoPoint.x > topeDerecha) {
+            nuevoPoint.x = topeDerecha;
+        }
+        
+    }
+    else
+    {
+        self.leftMenuView.alpha = 0;
+        self.rightMenuView.alpha = 1;
+        
+        int topeIzquierda = superX-self.leftMenuView.frame.size.width;
+        
+        if (nuevoPoint.x < topeIzquierda) {
+            nuevoPoint.x = topeIzquierda;
+        }
+    }
+    
+    
+    
     centerLayer.position = nuevoPoint;
     
     [sender setTranslation:CGPointZero inView:self.view];
+    
     
 }
 
