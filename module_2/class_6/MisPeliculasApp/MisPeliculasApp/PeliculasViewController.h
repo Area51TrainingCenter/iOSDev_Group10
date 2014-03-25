@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PeliculasViewController : UICollectionViewController
-
+{
+    NSMutableArray *peliculas;
+}
 @end

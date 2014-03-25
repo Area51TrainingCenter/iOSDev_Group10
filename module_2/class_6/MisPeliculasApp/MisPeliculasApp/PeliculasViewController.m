@@ -7,6 +7,8 @@
 //
 
 #import "PeliculasViewController.h"
+#import "PeliculaCell.h"
+#import "Pelicula.h"
 
 @interface PeliculasViewController ()
 
@@ -27,6 +29,22 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    peliculas = [NSMutableArray array];
+    NSString *pathPlist = [[NSBundle mainBundle] pathForResource:@"PeliculasList" ofType:@"plist"];
+    
+    NSArray *peliculasPlist = [NSArray arrayWithContentsOfFile:pathPlist];
+    
+    for (NSDictionary *peliDictionary in peliculasPlist) {
+        
+        Pelicula *nuevaPeli = [[Pelicula alloc] init];
+        
+        nuevaPeli.nombre = peliDictionary[@"nombre"];
+        nuevaPeli.anho = peliDictionary[@"anho"];
+        nuevaPeli.posterImage = [UIImage imageNamed:peliDictionary[@"posterImage"]];
+        
+        [peliculas addObject:nuevaPeli];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,6 +52,31 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(int)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+-(int)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return peliculas.count;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    PeliculaCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"peliCell" forIndexPath:indexPath];
+    
+    Pelicula *soyPeli = peliculas[indexPath.row];
+    
+    cell.posterView.image = soyPeli.posterImage;
+    cell.nombreLabel.text = soyPeli.nombre;
+    cell.anhoLabel.text = soyPeli.anho;
+    
+    return cell;
+}
+
 
 /*
 #pragma mark - Navigation

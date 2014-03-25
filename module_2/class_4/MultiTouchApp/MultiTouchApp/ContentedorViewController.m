@@ -47,23 +47,14 @@
         self.leftMenuView.alpha = 1;
         self.rightMenuView.alpha = 0;
         
-        int topeDerecha = superX+self.leftMenuView.frame.size.width;
         
-        if (nuevoPoint.x > topeDerecha) {
-            nuevoPoint.x = topeDerecha;
-        }
-        
+   
     }
     else
     {
         self.leftMenuView.alpha = 0;
         self.rightMenuView.alpha = 1;
-        
-        int topeIzquierda = superX-self.leftMenuView.frame.size.width;
-        
-        if (nuevoPoint.x < topeIzquierda) {
-            nuevoPoint.x = topeIzquierda;
-        }
+    
     }
     
     
@@ -73,6 +64,42 @@
     [sender setTranslation:CGPointZero inView:self.view];
     
     
+    
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        
+        if (self.leftMenuView.alpha == 1) {
+            
+            int topeDerecha = superX+self.leftMenuView.frame.size.width;
+            
+            if (centerLayer.position.x - superX > (self.leftMenuView.frame.size.width/2) ) {
+                nuevoPoint.x = topeDerecha;
+            }
+            else
+            {
+                nuevoPoint.x = superX;
+            }
+        }
+        else //rightMenuView.alpha == 1
+        {
+            int topeIzquierda = superX-self.rightMenuView.frame.size.width;
+            
+            if (superX - centerLayer.position.x > (self.rightMenuView.frame.size.width/2) ) {
+                nuevoPoint.x = topeIzquierda;
+            }
+            else
+            {
+                nuevoPoint.x = superX;
+            }
+        }
+        
+        
+        [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            
+            centerLayer.position = nuevoPoint;
+            
+        }completion:nil];
+   
+    }
 }
 
 

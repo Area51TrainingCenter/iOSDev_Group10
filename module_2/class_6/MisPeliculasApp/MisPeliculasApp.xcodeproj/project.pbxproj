@@ -22,6 +22,13 @@
 		085D637118E117CB00FFCC53 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 085D635018E117CB00FFCC53 /* UIKit.framework */; };
 		085D637918E117CB00FFCC53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 085D637718E117CB00FFCC53 /* InfoPlist.strings */; };
 		085D637B18E117CB00FFCC53 /* MisPeliculasAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D637A18E117CB00FFCC53 /* MisPeliculasAppTests.m */; };
+		085D638618E11AC800FFCC53 /* PeliculasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D638518E11AC800FFCC53 /* PeliculasViewController.m */; };
+		085D638918E11B3200FFCC53 /* PeliculaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D638818E11B3200FFCC53 /* PeliculaCell.m */; };
+		085D638B18E1204C00FFCC53 /* PeliculasList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 085D638A18E1204C00FFCC53 /* PeliculasList.plist */; };
+		085D638D18E1249200FFCC53 /* poster1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D638C18E1249200FFCC53 /* poster1.jpg */; };
+		085D638F18E124C800FFCC53 /* poster2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D638E18E124C800FFCC53 /* poster2.jpg */; };
+		085D639118E124FC00FFCC53 /* poster3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D639018E124FC00FFCC53 /* poster3.jpg */; };
+		085D639418E125FA00FFCC53 /* Pelicula.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D639318E125FA00FFCC53 /* Pelicula.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +62,16 @@
 		085D637618E117CB00FFCC53 /* MisPeliculasAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MisPeliculasAppTests-Info.plist"; sourceTree = "<group>"; };
 		085D637818E117CB00FFCC53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		085D637A18E117CB00FFCC53 /* MisPeliculasAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MisPeliculasAppTests.m; sourceTree = "<group>"; };
+		085D638418E11AC800FFCC53 /* PeliculasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeliculasViewController.h; sourceTree = "<group>"; };
+		085D638518E11AC800FFCC53 /* PeliculasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeliculasViewController.m; sourceTree = "<group>"; };
+		085D638718E11B3200FFCC53 /* PeliculaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeliculaCell.h; sourceTree = "<group>"; };
+		085D638818E11B3200FFCC53 /* PeliculaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeliculaCell.m; sourceTree = "<group>"; };
+		085D638A18E1204C00FFCC53 /* PeliculasList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PeliculasList.plist; sourceTree = "<group>"; };
+		085D638C18E1249200FFCC53 /* poster1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poster1.jpg; sourceTree = "<group>"; };
+		085D638E18E124C800FFCC53 /* poster2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poster2.jpg; sourceTree = "<group>"; };
+		085D639018E124FC00FFCC53 /* poster3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poster3.jpg; sourceTree = "<group>"; };
+		085D639218E125FA00FFCC53 /* Pelicula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pelicula.h; sourceTree = "<group>"; };
+		085D639318E125FA00FFCC53 /* Pelicula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pelicula.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +136,19 @@
 				085D635E18E117CB00FFCC53 /* Main_iPhone.storyboard */,
 				085D636118E117CB00FFCC53 /* Main_iPad.storyboard */,
 				085D636418E117CB00FFCC53 /* ViewController.h */,
+				085D639218E125FA00FFCC53 /* Pelicula.h */,
+				085D639318E125FA00FFCC53 /* Pelicula.m */,
+				085D638418E11AC800FFCC53 /* PeliculasViewController.h */,
+				085D638518E11AC800FFCC53 /* PeliculasViewController.m */,
+				085D638718E11B3200FFCC53 /* PeliculaCell.h */,
+				085D638818E11B3200FFCC53 /* PeliculaCell.m */,
 				085D636518E117CB00FFCC53 /* ViewController.m */,
+				085D638C18E1249200FFCC53 /* poster1.jpg */,
+				085D638E18E124C800FFCC53 /* poster2.jpg */,
+				085D639018E124FC00FFCC53 /* poster3.jpg */,
 				085D636718E117CB00FFCC53 /* Images.xcassets */,
 				085D635318E117CB00FFCC53 /* Supporting Files */,
+				085D638A18E1204C00FFCC53 /* PeliculasList.plist */,
 			);
 			path = MisPeliculasApp;
 			sourceTree = "<group>";
@@ -231,9 +258,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085D638B18E1204C00FFCC53 /* PeliculasList.plist in Resources */,
 				085D636318E117CB00FFCC53 /* Main_iPad.storyboard in Resources */,
 				085D636818E117CB00FFCC53 /* Images.xcassets in Resources */,
+				085D638F18E124C800FFCC53 /* poster2.jpg in Resources */,
+				085D638D18E1249200FFCC53 /* poster1.jpg in Resources */,
 				085D636018E117CB00FFCC53 /* Main_iPhone.storyboard in Resources */,
+				085D639118E124FC00FFCC53 /* poster3.jpg in Resources */,
 				085D635718E117CB00FFCC53 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				085D636618E117CB00FFCC53 /* ViewController.m in Sources */,
+				085D638618E11AC800FFCC53 /* PeliculasViewController.m in Sources */,
 				085D635D18E117CB00FFCC53 /* AppDelegate.m in Sources */,
+				085D638918E11B3200FFCC53 /* PeliculaCell.m in Sources */,
+				085D639418E125FA00FFCC53 /* Pelicula.m in Sources */,
 				085D635918E117CB00FFCC53 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

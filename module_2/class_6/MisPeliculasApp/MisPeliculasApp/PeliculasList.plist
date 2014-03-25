@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<array>
+	<dict>
+		<key>posterImage</key>
+		<string>poster1.jpg</string>
+		<key>nombre</key>
+		<string>Pokemon Diamond</string>
+		<key>anho</key>
+		<string>2005</string>
+	</dict>
+	<dict>
+		<key>posterImage</key>
+		<string>poster2.jpg</string>
+		<key>nombre</key>
+		<string>Asu mare</string>
+		<key>anho</key>
+		<string>2013</string>
+	</dict>
+	<dict>
+		<key>posterImage</key>
+		<string>poster3.jpg</string>
+		<key>nombre</key>
+		<string>Cloverfield</string>
+		<key>anho</key>
+		<string>2008</string>
+	</dict>
+	<dict>
+		<key>posterImage</key>
+		<string>poster2.jpg</string>
+		<key>nombre</key>
+		<string>Superman Returns</string>
+		<key>anho</key>
+		<string>2006</string>
+	</dict>
+	<dict>
+		<key>posterImage</key>
+		<string>poster1.jpg</string>
+		<key>nombre</key>
+		<string>Rocky IV</string>
+		<key>anho</key>
+		<string>1987</string>
+	</dict>
+</array>
 </plist>

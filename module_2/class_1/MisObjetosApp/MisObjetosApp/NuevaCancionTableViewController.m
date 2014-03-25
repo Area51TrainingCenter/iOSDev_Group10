@@ -145,6 +145,7 @@
         
         NSIndexPath *miIndex = [NSIndexPath indexPathForRow:3 inSection:0];
         [tableView reloadRowsAtIndexPaths:@[miIndex] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView reloadData];
     }
 }
 

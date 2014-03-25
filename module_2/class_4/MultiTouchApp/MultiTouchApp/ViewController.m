@@ -86,6 +86,7 @@
     
     [sender setTranslation:CGPointZero inView:self.view];
     
+    
     if (sender.state == UIGestureRecognizerStateEnded) {
         
         [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseOut animations:^{
