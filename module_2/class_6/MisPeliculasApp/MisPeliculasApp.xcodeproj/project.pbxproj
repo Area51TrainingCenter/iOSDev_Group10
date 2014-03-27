@@ -29,6 +29,9 @@
 		085D638F18E124C800FFCC53 /* poster2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D638E18E124C800FFCC53 /* poster2.jpg */; };
 		085D639118E124FC00FFCC53 /* poster3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D639018E124FC00FFCC53 /* poster3.jpg */; };
 		085D639418E125FA00FFCC53 /* Pelicula.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D639318E125FA00FFCC53 /* Pelicula.m */; };
+		085D639718E3B13100FFCC53 /* PeliCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D639618E3B13100FFCC53 /* PeliCollectionCell.m */; };
+		085D639B18E3B1BE00FFCC53 /* PelisTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D639A18E3B1BE00FFCC53 /* PelisTableViewController.m */; };
+		085D639E18E3B1E900FFCC53 /* PeliTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D639D18E3B1E900FFCC53 /* PeliTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,12 @@
 		085D639018E124FC00FFCC53 /* poster3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = poster3.jpg; sourceTree = "<group>"; };
 		085D639218E125FA00FFCC53 /* Pelicula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pelicula.h; sourceTree = "<group>"; };
 		085D639318E125FA00FFCC53 /* Pelicula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pelicula.m; sourceTree = "<group>"; };
+		085D639518E3B13100FFCC53 /* PeliCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeliCollectionCell.h; sourceTree = "<group>"; };
+		085D639618E3B13100FFCC53 /* PeliCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeliCollectionCell.m; sourceTree = "<group>"; };
+		085D639918E3B1BE00FFCC53 /* PelisTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PelisTableViewController.h; sourceTree = "<group>"; };
+		085D639A18E3B1BE00FFCC53 /* PelisTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PelisTableViewController.m; sourceTree = "<group>"; };
+		085D639C18E3B1E900FFCC53 /* PeliTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeliTableViewCell.h; sourceTree = "<group>"; };
+		085D639D18E3B1E900FFCC53 /* PeliTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeliTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +142,7 @@
 			children = (
 				085D635B18E117CB00FFCC53 /* AppDelegate.h */,
 				085D635C18E117CB00FFCC53 /* AppDelegate.m */,
+				085D639818E3B19000FFCC53 /* Tabla con CollectionViews */,
 				085D635E18E117CB00FFCC53 /* Main_iPhone.storyboard */,
 				085D636118E117CB00FFCC53 /* Main_iPad.storyboard */,
 				085D636418E117CB00FFCC53 /* ViewController.h */,
@@ -180,6 +190,19 @@
 				085D637718E117CB00FFCC53 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		085D639818E3B19000FFCC53 /* Tabla con CollectionViews */ = {
+			isa = PBXGroup;
+			children = (
+				085D639518E3B13100FFCC53 /* PeliCollectionCell.h */,
+				085D639618E3B13100FFCC53 /* PeliCollectionCell.m */,
+				085D639918E3B1BE00FFCC53 /* PelisTableViewController.h */,
+				085D639A18E3B1BE00FFCC53 /* PelisTableViewController.m */,
+				085D639C18E3B1E900FFCC53 /* PeliTableViewCell.h */,
+				085D639D18E3B1E900FFCC53 /* PeliTableViewCell.m */,
+			);
+			name = "Tabla con CollectionViews";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,11 +308,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				085D636618E117CB00FFCC53 /* ViewController.m in Sources */,
+				085D639B18E3B1BE00FFCC53 /* PelisTableViewController.m in Sources */,
 				085D638618E11AC800FFCC53 /* PeliculasViewController.m in Sources */,
 				085D635D18E117CB00FFCC53 /* AppDelegate.m in Sources */,
 				085D638918E11B3200FFCC53 /* PeliculaCell.m in Sources */,
 				085D639418E125FA00FFCC53 /* Pelicula.m in Sources */,
 				085D635918E117CB00FFCC53 /* main.m in Sources */,
+				085D639E18E3B1E900FFCC53 /* PeliTableViewCell.m in Sources */,
+				085D639718E3B13100FFCC53 /* PeliCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

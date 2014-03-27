@@ -38,6 +38,7 @@
         
         Pelicula *nuevaPeli = [[Pelicula alloc] init];
         
+        
         nuevaPeli.nombre = peliDictionary[@"nombre"];
         nuevaPeli.anho = peliDictionary[@"anho"];
         nuevaPeli.posterImage = [UIImage imageNamed:peliDictionary[@"posterImage"]];
@@ -76,6 +77,19 @@
     
     return cell;
 }
+
+- (IBAction)seApretoAnhadir:(UIBarButtonItem *)sender {
+    
+    Pelicula *nuevaPelicula = [[Pelicula alloc] init];
+    nuevaPelicula.nombre = @"Digimon";
+    nuevaPelicula.anho = @"1999";
+    nuevaPelicula.posterImage = [UIImage imageNamed:@"poster3.jpg"];
+    
+    [peliculas insertObject:nuevaPelicula atIndex:0];
+    [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]]];
+    
+}
+
 
 
 /*
