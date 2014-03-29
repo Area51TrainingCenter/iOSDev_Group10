@@ -13,6 +13,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    NSUserDefaults *miDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if (![miDefaults boolForKey:@"tutorialSeVio"]) {
+        
+        //Aqui muestro tutorial
+        NSLog(@"Primera vez!!!");
+        [miDefaults setBool:YES forKey:@"tutorialSeVio"];
+    }
+    else
+    {
+        
+        //Aqui muestro la primera escena
+        UIStoryboard *soyStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        self.window.rootViewController = [soyStoryboard instantiateViewControllerWithIdentifier:@"navInicioScene"];
+        
+    }
+    
     return YES;
 }
 							

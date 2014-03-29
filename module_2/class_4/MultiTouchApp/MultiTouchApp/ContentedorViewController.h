@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NoticiasTableViewController.h"
 
-@interface ContentedorViewController : UIViewController
+@interface ContentedorViewController : UIViewController <NoticiasDelegado>
+{
+    int topeDerecha;
+    int topeIzquierda;
+    int superX;
+}
+
 @property (weak, nonatomic) IBOutlet UIView *leftMenuView;
 @property (weak, nonatomic) IBOutlet UIView *rightMenuView;
 @property (weak, nonatomic) IBOutlet UIView *centerView;

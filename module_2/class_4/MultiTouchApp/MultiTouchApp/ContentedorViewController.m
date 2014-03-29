@@ -8,6 +8,7 @@
 
 #import "ContentedorViewController.h"
 
+
 @interface ContentedorViewController ()
 
 @end
@@ -27,6 +28,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+}
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    superX =self.view.layer.position.x;
+    
+    topeDerecha = superX+self.leftMenuView.frame.size.width;
+    topeIzquierda = superX-self.rightMenuView.frame.size.width;
 }
 
 
@@ -41,7 +54,7 @@
     nuevoPoint.x += translacion.x;
     //
     
-    int superX =self.view.layer.position.x;
+    
     
     if (nuevoPoint.x >= superX) {
         self.leftMenuView.alpha = 1;
@@ -69,7 +82,7 @@
         
         if (self.leftMenuView.alpha == 1) {
             
-            int topeDerecha = superX+self.leftMenuView.frame.size.width;
+            
             
             if (centerLayer.position.x - superX > (self.leftMenuView.frame.size.width/2) ) {
                 nuevoPoint.x = topeDerecha;
@@ -81,7 +94,7 @@
         }
         else //rightMenuView.alpha == 1
         {
-            int topeIzquierda = superX-self.rightMenuView.frame.size.width;
+            
             
             if (superX - centerLayer.position.x > (self.rightMenuView.frame.size.width/2) ) {
                 nuevoPoint.x = topeIzquierda;
@@ -110,7 +123,56 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
+-(void)seApretoMenuIzquierda
+{
+    CALayer *centerLayer =self.centerView.layer;
+    CGPoint nuevoPoint = centerLayer.position;
+    
+    if (centerLayer.position.x == topeDerecha) {
+        
+        nuevoPoint.x = superX;
+    }
+    else
+    {
+        self.leftMenuView.alpha = 1;
+        self.rightMenuView.alpha= 0;
+        nuevoPoint.x = topeDerecha;
+    }
+    
+    [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        
+        centerLayer.position = nuevoPoint;
+        
+    }completion:nil];
+    
+}
+
+-(void)seApretoMenuDerecha
+{
+    
+    CALayer *centerLayer =self.centerView.layer;
+    CGPoint nuevoPoint = centerLayer.position;
+    
+    if (centerLayer.position.x == topeIzquierda) {
+        
+        nuevoPoint.x = superX;
+    }
+    else
+    {
+        self.leftMenuView.alpha = 0;
+        self.rightMenuView.alpha= 1;
+        nuevoPoint.x = topeIzquierda;
+    }
+    
+    [UIView animateWithDuration:0.4 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:1 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        
+        centerLayer.position = nuevoPoint;
+        
+    }completion:nil];
+}
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -118,7 +180,16 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"noticiasSegue"]) {
+        
+        UINavigationController *navNoticias = segue.destinationViewController;
+        
+        NoticiasTableViewController *destino = navNoticias.viewControllers[0];
+        destino.miDelegado = self;
+        
+    }
 }
-*/
+
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		085D63E218E65DCE00FFCC53 /* NoticiasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D63E118E65DCE00FFCC53 /* NoticiasTableViewController.m */; };
 		81EC18F518D7CFF300CE6D23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EC18F418D7CFF300CE6D23 /* Foundation.framework */; };
 		81EC18F718D7CFF300CE6D23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EC18F618D7CFF300CE6D23 /* CoreGraphics.framework */; };
 		81EC18F918D7CFF300CE6D23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EC18F818D7CFF300CE6D23 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		085D63E018E65DCE00FFCC53 /* NoticiasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiasTableViewController.h; sourceTree = "<group>"; };
+		085D63E118E65DCE00FFCC53 /* NoticiasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiasTableViewController.m; sourceTree = "<group>"; };
 		81EC18F118D7CFF300CE6D23 /* MultiTouchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiTouchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EC18F418D7CFF300CE6D23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81EC18F618D7CFF300CE6D23 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +121,8 @@
 				81EC190318D7CFF300CE6D23 /* AppDelegate.h */,
 				81EC190418D7CFF300CE6D23 /* AppDelegate.m */,
 				81EC190618D7CFF300CE6D23 /* Main.storyboard */,
+				085D63E018E65DCE00FFCC53 /* NoticiasTableViewController.h */,
+				085D63E118E65DCE00FFCC53 /* NoticiasTableViewController.m */,
 				81ECD3FA18DA87CD00736BE8 /* ContentedorViewController.h */,
 				81ECD3FB18DA87CD00736BE8 /* ContentedorViewController.m */,
 				81EC190918D7CFF300CE6D23 /* ViewController.h */,
@@ -256,6 +261,7 @@
 			files = (
 				81EC190B18D7CFF300CE6D23 /* ViewController.m in Sources */,
 				81EC190518D7CFF300CE6D23 /* AppDelegate.m in Sources */,
+				085D63E218E65DCE00FFCC53 /* NoticiasTableViewController.m in Sources */,
 				81ECD3FC18DA87CD00736BE8 /* ContentedorViewController.m in Sources */,
 				81EC190118D7CFF300CE6D23 /* main.m in Sources */,
 			);

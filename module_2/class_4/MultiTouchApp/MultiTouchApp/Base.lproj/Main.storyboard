@@ -145,10 +145,10 @@
                 </pongPressGestureRecognizer>
             </objects>
         </scene>
-        <!--Table View Controller - Últimas Noticias-->
+        <!--Noticias Table View Controller - Últimas Noticias-->
         <scene sceneID="N4J-Px-8c1">
             <objects>
-                <tableViewController id="amG-Js-5gZ" sceneMemberID="viewController">
+                <tableViewController id="amG-Js-5gZ" customClass="NoticiasTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="qfg-4Q-0zS">
                         <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,8 +259,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Últimas Noticias" id="3El-Yw-iwt">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="pKY-ns-gn3"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="22k-6s-bDp"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="pKY-ns-gn3">
+                            <connections>
+                                <action selector="menuIzquierdaPressed:" destination="amG-Js-5gZ" id="zBt-UQ-DBv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="22k-6s-bDp">
+                            <connections>
+                                <action selector="menuDerechaPressed:" destination="amG-Js-5gZ" id="3bv-oM-00r"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2m6-nW-x0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -483,7 +491,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="5ph-vW-buq" appends="YES" id="Ak1-Cx-bAu"/>
-                                    <segue destination="JJk-Jb-8wa" kind="embed" id="2HB-Z5-Znl"/>
+                                    <segue destination="JJk-Jb-8wa" kind="embed" identifier="noticiasSegue" id="2HB-Z5-Znl"/>
                                 </connections>
                             </containerView>
                         </subviews>
