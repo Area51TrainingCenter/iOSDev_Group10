@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Album" representedClassName="Album" syncable="YES">
+        <attribute name="anho" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="artista" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Artista" inverseName="albumes" inverseEntity="Artista" syncable="YES"/>
+        <relationship name="canciones" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cancion" inverseName="album" inverseEntity="Cancion" syncable="YES"/>
+    </entity>
+    <entity name="Artista" representedClassName="Artista" syncable="YES">
+        <attribute name="fechaNacimiento" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="albumes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Album" inverseName="artista" inverseEntity="Album" syncable="YES"/>
+    </entity>
+    <entity name="Cancion" representedClassName="Cancion" syncable="YES">
+        <attribute name="duracion" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="orden" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="album" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Album" inverseName="canciones" inverseEntity="Album" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cancion" positionX="-54" positionY="-9" width="128" height="103"/>
+        <element name="Artista" positionX="-36" positionY="27" width="128" height="88"/>
+        <element name="Album" positionX="-18" positionY="54" width="128" height="103"/>
+    </elements>
+</model>
