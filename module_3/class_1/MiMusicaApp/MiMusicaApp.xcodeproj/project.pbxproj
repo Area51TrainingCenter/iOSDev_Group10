@@ -50,10 +50,20 @@
 		085D648218EA3F0700FFCC53 /* IBMessageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D646518EA3F0700FFCC53 /* IBMessageProcessor.m */; };
 		085D648318EA3F0700FFCC53 /* IBTargetAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D646718EA3F0700FFCC53 /* IBTargetAction.m */; };
 		085D648618EA406500FFCC53 /* MiMusicaModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 085D648418EA406500FFCC53 /* MiMusicaModel.xcdatamodeld */; };
-		085D649318EA460000FFCC53 /* Cancion.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D649218EA460000FFCC53 /* Cancion.m */; };
-		085D649618EA460000FFCC53 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D649518EA460000FFCC53 /* Album.m */; };
-		085D649918EA460100FFCC53 /* Artista.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D649818EA460100FFCC53 /* Artista.m */; };
 		085D649C18EA4BBD00FFCC53 /* ArtistasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D649B18EA4BBD00FFCC53 /* ArtistasTableViewController.m */; };
+		085D649E18ECE8CE00FFCC53 /* ArtistasList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 085D649D18ECE8CE00FFCC53 /* ArtistasList.plist */; };
+		085D64A618ECED1800FFCC53 /* libido1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D649F18ECED1800FFCC53 /* libido1.jpg */; };
+		085D64A718ECED1800FFCC53 /* libido2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D64A018ECED1800FFCC53 /* libido2.jpg */; };
+		085D64A918ECED1800FFCC53 /* u21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D64A218ECED1800FFCC53 /* u21.jpg */; };
+		085D64AA18ECED1800FFCC53 /* killers1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D64A318ECED1800FFCC53 /* killers1.jpg */; };
+		085D64AB18ECED1800FFCC53 /* killers3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D64A418ECED1800FFCC53 /* killers3.jpg */; };
+		085D64AC18ECED1800FFCC53 /* killers2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 085D64A518ECED1800FFCC53 /* killers2.jpg */; };
+		085D64B018EF828C00FFCC53 /* Cancion.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D64AF18EF828C00FFCC53 /* Cancion.m */; };
+		085D64B318EF828C00FFCC53 /* Artista.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D64B218EF828C00FFCC53 /* Artista.m */; };
+		085D64B618EF828C00FFCC53 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D64B518EF828C00FFCC53 /* Album.m */; };
+		085D64B918EF8D0D00FFCC53 /* AlbumesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D64B818EF8D0D00FFCC53 /* AlbumesTableViewController.m */; };
+		085D64BC18EF8D2000FFCC53 /* AlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D64BB18EF8D2000FFCC53 /* AlbumTableViewCell.m */; };
+		085D650218EFA68500FFCC53 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085D650118EFA68500FFCC53 /* iPadStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,14 +156,26 @@
 		085D646618EA3F0700FFCC53 /* IBTargetAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTargetAction.h; sourceTree = "<group>"; };
 		085D646718EA3F0700FFCC53 /* IBTargetAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTargetAction.m; sourceTree = "<group>"; };
 		085D648518EA406500FFCC53 /* MiMusicaModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MiMusicaModel.xcdatamodel; sourceTree = "<group>"; };
-		085D649118EA460000FFCC53 /* Cancion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cancion.h; path = ../Cancion.h; sourceTree = "<group>"; };
-		085D649218EA460000FFCC53 /* Cancion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cancion.m; path = ../Cancion.m; sourceTree = "<group>"; };
-		085D649418EA460000FFCC53 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Album.h; path = ../Album.h; sourceTree = "<group>"; };
-		085D649518EA460000FFCC53 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Album.m; path = ../Album.m; sourceTree = "<group>"; };
-		085D649718EA460100FFCC53 /* Artista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Artista.h; path = ../Artista.h; sourceTree = "<group>"; };
-		085D649818EA460100FFCC53 /* Artista.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Artista.m; path = ../Artista.m; sourceTree = "<group>"; };
 		085D649A18EA4BBD00FFCC53 /* ArtistasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistasTableViewController.h; sourceTree = "<group>"; };
 		085D649B18EA4BBD00FFCC53 /* ArtistasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistasTableViewController.m; sourceTree = "<group>"; };
+		085D649D18ECE8CE00FFCC53 /* ArtistasList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ArtistasList.plist; sourceTree = "<group>"; };
+		085D649F18ECED1800FFCC53 /* libido1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = libido1.jpg; sourceTree = "<group>"; };
+		085D64A018ECED1800FFCC53 /* libido2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = libido2.jpg; sourceTree = "<group>"; };
+		085D64A218ECED1800FFCC53 /* u21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = u21.jpg; sourceTree = "<group>"; };
+		085D64A318ECED1800FFCC53 /* killers1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = killers1.jpg; sourceTree = "<group>"; };
+		085D64A418ECED1800FFCC53 /* killers3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = killers3.jpg; sourceTree = "<group>"; };
+		085D64A518ECED1800FFCC53 /* killers2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = killers2.jpg; sourceTree = "<group>"; };
+		085D64AE18EF828C00FFCC53 /* Cancion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cancion.h; sourceTree = "<group>"; };
+		085D64AF18EF828C00FFCC53 /* Cancion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cancion.m; sourceTree = "<group>"; };
+		085D64B118EF828C00FFCC53 /* Artista.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Artista.h; sourceTree = "<group>"; };
+		085D64B218EF828C00FFCC53 /* Artista.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Artista.m; sourceTree = "<group>"; };
+		085D64B418EF828C00FFCC53 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		085D64B518EF828C00FFCC53 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		085D64B718EF8D0D00FFCC53 /* AlbumesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumesTableViewController.h; sourceTree = "<group>"; };
+		085D64B818EF8D0D00FFCC53 /* AlbumesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumesTableViewController.m; sourceTree = "<group>"; };
+		085D64BA18EF8D2000FFCC53 /* AlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumTableViewCell.h; sourceTree = "<group>"; };
+		085D64BB18EF8D2000FFCC53 /* AlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewCell.m; sourceTree = "<group>"; };
+		085D650118EFA68500FFCC53 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,10 +241,16 @@
 				085D63FF18EA3ED400FFCC53 /* AppDelegate.m */,
 				085D648418EA406500FFCC53 /* MiMusicaModel.xcdatamodeld */,
 				085D640118EA3ED400FFCC53 /* Main.storyboard */,
+				085D650118EFA68500FFCC53 /* iPadStoryboard.storyboard */,
 				085D649A18EA4BBD00FFCC53 /* ArtistasTableViewController.h */,
 				085D649B18EA4BBD00FFCC53 /* ArtistasTableViewController.m */,
+				085D64B718EF8D0D00FFCC53 /* AlbumesTableViewController.h */,
+				085D64B818EF8D0D00FFCC53 /* AlbumesTableViewController.m */,
+				085D64BA18EF8D2000FFCC53 /* AlbumTableViewCell.h */,
+				085D64BB18EF8D2000FFCC53 /* AlbumTableViewCell.m */,
 				085D640418EA3ED400FFCC53 /* ViewController.h */,
 				085D640518EA3ED400FFCC53 /* ViewController.m */,
+				085D64AD18ECED1B00FFCC53 /* covers */,
 				085D640718EA3ED400FFCC53 /* Images.xcassets */,
 				085D63F618EA3ED400FFCC53 /* Supporting Files */,
 			);
@@ -391,14 +419,28 @@
 		085D648718EA44DB00FFCC53 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				085D649718EA460100FFCC53 /* Artista.h */,
-				085D649818EA460100FFCC53 /* Artista.m */,
-				085D649418EA460000FFCC53 /* Album.h */,
-				085D649518EA460000FFCC53 /* Album.m */,
-				085D649118EA460000FFCC53 /* Cancion.h */,
-				085D649218EA460000FFCC53 /* Cancion.m */,
+				085D64B418EF828C00FFCC53 /* Album.h */,
+				085D64B518EF828C00FFCC53 /* Album.m */,
+				085D64B118EF828C00FFCC53 /* Artista.h */,
+				085D64B218EF828C00FFCC53 /* Artista.m */,
+				085D64AE18EF828C00FFCC53 /* Cancion.h */,
+				085D64AF18EF828C00FFCC53 /* Cancion.m */,
+				085D649D18ECE8CE00FFCC53 /* ArtistasList.plist */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		085D64AD18ECED1B00FFCC53 /* covers */ = {
+			isa = PBXGroup;
+			children = (
+				085D649F18ECED1800FFCC53 /* libido1.jpg */,
+				085D64A018ECED1800FFCC53 /* libido2.jpg */,
+				085D64A218ECED1800FFCC53 /* u21.jpg */,
+				085D64A318ECED1800FFCC53 /* killers1.jpg */,
+				085D64A418ECED1800FFCC53 /* killers3.jpg */,
+				085D64A518ECED1800FFCC53 /* killers2.jpg */,
+			);
+			name = covers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,7 +521,15 @@
 			files = (
 				085D640818EA3ED400FFCC53 /* Images.xcassets in Resources */,
 				085D63FA18EA3ED400FFCC53 /* InfoPlist.strings in Resources */,
+				085D64AB18ECED1800FFCC53 /* killers3.jpg in Resources */,
+				085D64A618ECED1800FFCC53 /* libido1.jpg in Resources */,
+				085D64AC18ECED1800FFCC53 /* killers2.jpg in Resources */,
 				085D640318EA3ED400FFCC53 /* Main.storyboard in Resources */,
+				085D649E18ECE8CE00FFCC53 /* ArtistasList.plist in Resources */,
+				085D64AA18ECED1800FFCC53 /* killers1.jpg in Resources */,
+				085D64A918ECED1800FFCC53 /* u21.jpg in Resources */,
+				085D64A718ECED1800FFCC53 /* libido2.jpg in Resources */,
+				085D650218EFA68500FFCC53 /* iPadStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +553,6 @@
 				085D647618EA3F0700FFCC53 /* UIColor+InnerBand.m in Sources */,
 				085D646B18EA3F0700FFCC53 /* IBHTMLLabel.m in Sources */,
 				085D647B18EA3F0700FFCC53 /* IBCoreDataStore.m in Sources */,
-				085D649318EA460000FFCC53 /* Cancion.m in Sources */,
 				085D648118EA3F0700FFCC53 /* IBMessageCenter.m in Sources */,
 				085D646F18EA3F0700FFCC53 /* NSManagedObject+InnerBand.m in Sources */,
 				085D648318EA3F0700FFCC53 /* IBTargetAction.m in Sources */,
@@ -511,10 +560,10 @@
 				085D646918EA3F0700FFCC53 /* IBAlertView.m in Sources */,
 				085D646818EA3F0700FFCC53 /* IBActionSheet.m in Sources */,
 				085D646C18EA3F0700FFCC53 /* CGContext+InnerBand.m in Sources */,
-				085D649618EA460000FFCC53 /* Album.m in Sources */,
 				085D647C18EA3F0700FFCC53 /* IBBlockBasedDispatchMessage.m in Sources */,
 				085D647218EA3F0700FFCC53 /* NSNumber+InnerBand.m in Sources */,
 				085D647418EA3F0700FFCC53 /* NSString+Encoding.m in Sources */,
+				085D64B618EF828C00FFCC53 /* Album.m in Sources */,
 				085D647318EA3F0700FFCC53 /* NSObject+InnerBand.m in Sources */,
 				085D640618EA3ED400FFCC53 /* ViewController.m in Sources */,
 				085D647A18EA3F0700FFCC53 /* IBViewUtil.m in Sources */,
@@ -531,9 +580,12 @@
 				085D648618EA406500FFCC53 /* MiMusicaModel.xcdatamodeld in Sources */,
 				085D646A18EA3F0700FFCC53 /* IBCoreTextLabel.m in Sources */,
 				085D647818EA3F0700FFCC53 /* UIView+InnerBand.m in Sources */,
-				085D649918EA460100FFCC53 /* Artista.m in Sources */,
+				085D64B918EF8D0D00FFCC53 /* AlbumesTableViewController.m in Sources */,
 				085D647518EA3F0700FFCC53 /* NSString+InnerBand.m in Sources */,
+				085D64B318EF828C00FFCC53 /* Artista.m in Sources */,
 				085D648218EA3F0700FFCC53 /* IBMessageProcessor.m in Sources */,
+				085D64B018EF828C00FFCC53 /* Cancion.m in Sources */,
+				085D64BC18EF8D2000FFCC53 /* AlbumTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,7 +713,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MiMusicaApp/MiMusicaApp-Prefix.pch";
 				INFOPLIST_FILE = "MiMusicaApp/MiMusicaApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -674,7 +728,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MiMusicaApp/MiMusicaApp-Prefix.pch";
 				INFOPLIST_FILE = "MiMusicaApp/MiMusicaApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

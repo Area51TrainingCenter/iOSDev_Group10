@@ -2,7 +2,7 @@
 //  Album.h
 //  MiMusicaApp
 //
-//  Created by Diego Cruz on 31/03/14.
+//  Created by Diego Cruz on 4/04/14.
 //  Copyright (c) 2014 Diego Cruz. All rights reserved.
 //
 
@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * titulo;
 @property (nonatomic, retain) NSNumber * anho;
+@property (nonatomic, retain) NSString * cover;
 @property (nonatomic, retain) NSSet *canciones;
 @property (nonatomic, retain) Artista *artista;
 @end

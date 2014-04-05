@@ -12,4 +12,5 @@
 {
     NSArray *artistas;
 }
+
 @end

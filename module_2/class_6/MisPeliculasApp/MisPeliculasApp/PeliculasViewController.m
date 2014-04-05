@@ -43,6 +43,12 @@
         nuevaPeli.anho = peliDictionary[@"anho"];
         nuevaPeli.posterImage = [UIImage imageNamed:peliDictionary[@"posterImage"]];
         
+        
+        NSSet *albumes;
+        
+        //En el caso que tengan que meter un arreglo al set
+        /*soyArtista.*/albumes = [NSSet setWithArray:peliDictionary[@"albumes"]] ;
+        
         [peliculas addObject:nuevaPeli];
     }
     

@@ -2,7 +2,7 @@
 //  Album.m
 //  MiMusicaApp
 //
-//  Created by Diego Cruz on 31/03/14.
+//  Created by Diego Cruz on 4/04/14.
 //  Copyright (c) 2014 Diego Cruz. All rights reserved.
 //
 
@@ -15,6 +15,7 @@
 
 @dynamic titulo;
 @dynamic anho;
+@dynamic cover;
 @dynamic canciones;
 @dynamic artista;
 

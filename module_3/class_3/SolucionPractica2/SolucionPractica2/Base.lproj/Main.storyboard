@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="o29-Go-pbS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Practica2 Table View Controller - Practica 2-->
+        <scene sceneID="VRX-7u-kT0">
+            <objects>
+                <tableViewController id="xn1-eF-Wlx" customClass="Practica2TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Zdc-6Z-2Si">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="lBq-oL-qDJ">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="92" id="QDW-l9-JmV">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QDW-l9-JmV" id="2EW-X9-KfN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwA-rM-jR8">
+                                                    <rect key="frame" x="229" y="29" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xee-81-BIe">
+                                                    <rect key="frame" x="143" y="29" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HrV-sJ-kJd">
+                                                    <rect key="frame" x="53" y="29" width="34" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cm9-eO-QiY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.80000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="320" id="NzB-gO-u2G"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="iRx-fo-M9x" appends="YES" id="UIN-z8-EEu"/>
+                                                    </connections>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Cm9-eO-QiY" secondAttribute="bottom" id="Inc-lS-c9d"/>
+                                                <constraint firstAttribute="trailing" secondItem="Cm9-eO-QiY" secondAttribute="trailing" id="oyu-n4-okb"/>
+                                                <constraint firstItem="Cm9-eO-QiY" firstAttribute="top" secondItem="2EW-X9-KfN" secondAttribute="top" id="yj7-Ik-LDN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="xn1-eF-Wlx" id="p7W-pS-FJt"/>
+                            <outlet property="delegate" destination="xn1-eF-Wlx" id="xHh-Cy-k0R"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Practica 2" id="xHN-T6-5Y1"/>
+                    <connections>
+                        <outlet property="botoncito1" destination="NwA-rM-jR8" id="L7f-A5-NFR"/>
+                        <outlet property="botoncito2" destination="Xee-81-BIe" id="WIU-I9-hTF"/>
+                        <outlet property="botoncito3" destination="HrV-sJ-kJd" id="8G7-vb-PhQ"/>
+                        <outlet property="distanciaDerecha" destination="oyu-n4-okb" id="DPp-42-V1G"/>
+                        <outlet property="mascaraView" destination="Cm9-eO-QiY" id="x8X-zD-inx"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1Q-nE-hNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="iRx-fo-M9x">
+                    <connections>
+                        <action selector="seEstaHaciendoPan:" destination="xn1-eF-Wlx" id="Nsf-Fk-Xwg"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="538" y="60"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ziV-hb-CBZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o29-Go-pbS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="af5-3C-7lC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xn1-eF-Wlx" kind="relationship" relationship="rootViewController" id="FED-YP-0VC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFX-df-Dta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="60"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

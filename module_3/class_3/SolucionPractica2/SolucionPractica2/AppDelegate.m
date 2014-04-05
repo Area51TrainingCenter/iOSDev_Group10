@@ -1,62 +1,18 @@
 //
 //  AppDelegate.m
-//  MiMusicaApp
+//  SolucionPractica2
 //
-//  Created by Diego Cruz on 31/03/14.
+//  Created by Diego Cruz on 4/04/14.
 //  Copyright (c) 2014 Diego Cruz. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "Artista.h"
-#import "Album.h"
-#import "Cancion.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
-    NSUserDefaults *miDefaults = [NSUserDefaults standardUserDefaults];
-    
-    if (![miDefaults objectForKey:@"seCargoPlist"]) {
-        
-        NSString *pathFile = [[NSBundle mainBundle] pathForResource:@"ArtistasList" ofType:@"plist"];
-        NSArray *artistasPlist = [NSArray arrayWithContentsOfFile:pathFile];
-        
-        for (NSDictionary *artistaDic in artistasPlist) {
-            
-            Artista *nuevoArtista = [Artista create];
-            nuevoArtista.nombre = artistaDic[@"nombre"];
-            nuevoArtista.fechaNacimiento = artistaDic[@"fechaNacimiento"];
-            
-            for (NSDictionary *albumDic in artistaDic[@"albumes"]) {
-                Album *nuevoAlbum = [Album create];
-                nuevoAlbum.titulo = albumDic[@"titulo"];
-                nuevoAlbum.anho = albumDic[@"anho"];
-                nuevoAlbum.cover = albumDic[@"cover"];
-                nuevoAlbum.artista = nuevoArtista;
-                
-                for (NSDictionary *cancionDic in albumDic[@"canciones"]) {
-                    Cancion *nuevaCancion = [Cancion create];
-                    nuevaCancion.titulo = cancionDic[@"titulo"];
-                    nuevaCancion.duracion = cancionDic[@"duracion"];
-                    nuevaCancion.orden = cancionDic[@"orden"];
-                    
-                    nuevaCancion.album = nuevoAlbum;
-                }
-            }
-
-        }
-        
-        [[IBCoreDataStore mainStore] save];
-        
-        
-        [miDefaults setBool:YES forKey:@"seCargoPlist"];
-    }
-    
-    
-    
     return YES;
 }
 							

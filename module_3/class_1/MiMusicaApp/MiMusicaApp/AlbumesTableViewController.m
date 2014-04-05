@@ -1,21 +1,20 @@
 //
-//  ArtistasTableViewController.m
+//  AlbumesTableViewController.m
 //  MiMusicaApp
 //
-//  Created by Diego Cruz on 31/03/14.
+//  Created by Diego Cruz on 4/04/14.
 //  Copyright (c) 2014 Diego Cruz. All rights reserved.
 //
 
-#import "ArtistasTableViewController.h"
-#import "Artista.h"
-#import "Album.h"
 #import "AlbumesTableViewController.h"
+#import "AlbumTableViewCell.h"
+#import "Album.h"
 
-@interface ArtistasTableViewController ()
+@interface AlbumesTableViewController ()
 
 @end
 
-@implementation ArtistasTableViewController
+@implementation AlbumesTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,19 +34,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    artistas = [NSArray array];
-    
-    
-    artistas = [Artista allOrderedBy:@"nombre" ascending:YES];
-    //[self.tableView reloadData];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,18 +53,25 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return artistas.count;
+    return self.misAlbumes.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"artistaCell" forIndexPath:indexPath];
+    AlbumTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"albumCell" forIndexPath:indexPath];
     
-    Artista *soyArtista = artistas[indexPath.row];
+    Album *soyAlbum = self.misAlbumes[indexPath.row];
     
     // Configure the cell...
-    cell.textLabel.text = soyArtista.nombre;
+    cell.tituloLabel.text = soyAlbum.titulo;
+    cell.anhoLabel.text = soyAlbum.anho.stringValue;
+    
+    NSString *ultimoString = soyAlbum.canciones.count!=1?@"ones":@"ón";
+    
+    cell.numCancionesLabel.text = [NSString stringWithFormat:@"%d canci%@",soyAlbum.canciones.count,ultimoString];
+    
+    cell.posterView.image = [UIImage imageNamed:soyAlbum.cover];
     
     return cell;
 }
@@ -122,22 +115,15 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSSortDescriptor *miSort = [NSSortDescriptor sortDescriptorWithKey:@"titulo" ascending:YES];
-    
-    int artistaSeleccionado = self.tableView.indexPathForSelectedRow.row;
-    
-    Artista *miArtista = artistas[artistaSeleccionado];
-    NSArray *albumes = [miArtista.albumes sortedArrayUsingDescriptors:@[miSort]];
-    
-    AlbumesTableViewController *destino = segue.destinationViewController;
-    destino.misAlbumes = albumes;
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
-
+*/
 
 @end
