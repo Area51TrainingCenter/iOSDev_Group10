@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArtistaiPadTableViewController.h"
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController <ItemsDelegado,UITableViewDataSource,UICollectionViewDataSource, UITableViewDelegate, UICollectionViewDelegateFlowLayout >
+{
+    UIPopoverController *popOver;
+}
+@property (weak, nonatomic) IBOutlet UILabel *miLabel;
 @end

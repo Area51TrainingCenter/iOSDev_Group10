@@ -64,6 +64,7 @@
 		085D64B918EF8D0D00FFCC53 /* AlbumesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D64B818EF8D0D00FFCC53 /* AlbumesTableViewController.m */; };
 		085D64BC18EF8D2000FFCC53 /* AlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D64BB18EF8D2000FFCC53 /* AlbumTableViewCell.m */; };
 		085D650218EFA68500FFCC53 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 085D650118EFA68500FFCC53 /* iPadStoryboard.storyboard */; };
+		085D650518F3908300FFCC53 /* ArtistaiPadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 085D650418F3908300FFCC53 /* ArtistaiPadTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +177,8 @@
 		085D64BA18EF8D2000FFCC53 /* AlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumTableViewCell.h; sourceTree = "<group>"; };
 		085D64BB18EF8D2000FFCC53 /* AlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumTableViewCell.m; sourceTree = "<group>"; };
 		085D650118EFA68500FFCC53 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
+		085D650318F3908300FFCC53 /* ArtistaiPadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistaiPadTableViewController.h; sourceTree = "<group>"; };
+		085D650418F3908300FFCC53 /* ArtistaiPadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistaiPadTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +253,8 @@
 				085D64BB18EF8D2000FFCC53 /* AlbumTableViewCell.m */,
 				085D640418EA3ED400FFCC53 /* ViewController.h */,
 				085D640518EA3ED400FFCC53 /* ViewController.m */,
+				085D650318F3908300FFCC53 /* ArtistaiPadTableViewController.h */,
+				085D650418F3908300FFCC53 /* ArtistaiPadTableViewController.m */,
 				085D64AD18ECED1B00FFCC53 /* covers */,
 				085D640718EA3ED400FFCC53 /* Images.xcassets */,
 				085D63F618EA3ED400FFCC53 /* Supporting Files */,
@@ -576,6 +581,7 @@
 				085D649C18EA4BBD00FFCC53 /* ArtistasTableViewController.m in Sources */,
 				085D648018EA3F0700FFCC53 /* IBDispatchMessage.m in Sources */,
 				085D647F18EA3F0700FFCC53 /* IBSequencedMessage.m in Sources */,
+				085D650518F3908300FFCC53 /* ArtistaiPadTableViewController.m in Sources */,
 				085D647118EA3F0700FFCC53 /* NSMutableString+InnerBand.m in Sources */,
 				085D648618EA406500FFCC53 /* MiMusicaModel.xcdatamodeld in Sources */,
 				085D646A18EA3F0700FFCC53 /* IBCoreTextLabel.m in Sources */,
