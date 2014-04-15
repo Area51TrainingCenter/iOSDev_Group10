@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Msn-lW-uHV">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Mi Mapa-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="JUViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Ep-lJ-W4b"/>
+                        <viewControllerLayoutGuide type="bottom" id="vTY-XZ-6QY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yoW-Np-a9Z">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="2WC-DA-cE1"/>
+                                    <outletCollection property="gestureRecognizers" destination="ZCA-ib-ygH" appends="YES" id="FWU-z3-FRI"/>
+                                </connections>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-Zj-ie5">
+                                <rect key="frame" x="20" y="514" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="lh9-do-96I"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Mapa"/>
+                                    <segment title="Satélite"/>
+                                    <segment title="Híbrido"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="cambioTipoMapa:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gv6-ja-nia"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vTY-XZ-6QY" firstAttribute="top" secondItem="KoH-Zj-ie5" secondAttribute="bottom" constant="26" id="0Ui-6U-aA8"/>
+                            <constraint firstItem="yoW-Np-a9Z" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3J3-Zz-nGh"/>
+                            <constraint firstItem="yoW-Np-a9Z" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="3Rg-Kj-C7Z"/>
+                            <constraint firstItem="vTY-XZ-6QY" firstAttribute="top" secondItem="yoW-Np-a9Z" secondAttribute="bottom" id="8Si-Fa-XPX"/>
+                            <constraint firstItem="KoH-Zj-ie5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="a3g-HE-rib"/>
+                            <constraint firstAttribute="trailing" secondItem="yoW-Np-a9Z" secondAttribute="trailing" id="hFZ-zU-Thx"/>
+                            <constraint firstAttribute="trailing" secondItem="KoH-Zj-ie5" secondAttribute="trailing" constant="20" id="tEB-Wu-0zW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mi Mapa" id="3Kt-5a-qBU">
+                        <barButtonItem key="rightBarButtonItem" title="Mi Ubicacion" id="awh-go-6kd">
+                            <connections>
+                                <action selector="toogleMiUbicacion:" destination="vXZ-lx-hvc" id="mzH-DE-6C1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="miMapa" destination="yoW-Np-a9Z" id="xcA-Z4-xHb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="ZCA-ib-ygH">
+                    <connections>
+                        <action selector="seHizoLongPress:" destination="vXZ-lx-hvc" id="Bnv-Ik-5kp"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="639" y="24"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Chy-75-UUc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Msn-lW-uHV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u0s-5b-eYy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="vLV-RB-0JN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRA-PQ-14n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="24"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

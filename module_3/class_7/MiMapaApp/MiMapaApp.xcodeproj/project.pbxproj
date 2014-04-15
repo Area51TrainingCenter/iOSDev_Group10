@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8183797C18FCB29A0040D7BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8183797B18FCB29A0040D7BE /* Foundation.framework */; };
+		8183797E18FCB29A0040D7BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8183797D18FCB29A0040D7BE /* CoreGraphics.framework */; };
+		8183798018FCB29A0040D7BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8183797F18FCB29A0040D7BE /* UIKit.framework */; };
+		8183798618FCB29A0040D7BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8183798418FCB29A0040D7BE /* InfoPlist.strings */; };
+		8183798818FCB29A0040D7BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8183798718FCB29A0040D7BE /* main.m */; };
+		8183798C18FCB29A0040D7BE /* JUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8183798B18FCB29A0040D7BE /* JUAppDelegate.m */; };
+		8183798F18FCB29A0040D7BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8183798D18FCB29A0040D7BE /* Main.storyboard */; };
+		8183799218FCB29A0040D7BE /* JUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8183799118FCB29A0040D7BE /* JUViewController.m */; };
+		8183799418FCB29A0040D7BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8183799318FCB29A0040D7BE /* Images.xcassets */; };
+		8183799B18FCB29A0040D7BE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8183799A18FCB29A0040D7BE /* XCTest.framework */; };
+		8183799C18FCB29A0040D7BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8183797B18FCB29A0040D7BE /* Foundation.framework */; };
+		8183799D18FCB29A0040D7BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8183797F18FCB29A0040D7BE /* UIKit.framework */; };
+		818379A518FCB29A0040D7BE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 818379A318FCB29A0040D7BE /* InfoPlist.strings */; };
+		818379A718FCB29A0040D7BE /* MiMapaAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 818379A618FCB29A0040D7BE /* MiMapaAppTests.m */; };
+		818379B118FCB3810040D7BE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 818379B018FCB3810040D7BE /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8183799E18FCB29A0040D7BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8183797018FCB29A0040D7BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8183797718FCB29A0040D7BE;
+			remoteInfo = MiMapaApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8183797818FCB29A0040D7BE /* MiMapaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiMapaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8183797B18FCB29A0040D7BE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8183797D18FCB29A0040D7BE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8183797F18FCB29A0040D7BE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8183798318FCB29A0040D7BE /* MiMapaApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiMapaApp-Info.plist"; sourceTree = "<group>"; };
+		8183798518FCB29A0040D7BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8183798718FCB29A0040D7BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8183798918FCB29A0040D7BE /* MiMapaApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MiMapaApp-Prefix.pch"; sourceTree = "<group>"; };
+		8183798A18FCB29A0040D7BE /* JUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JUAppDelegate.h; sourceTree = "<group>"; };
+		8183798B18FCB29A0040D7BE /* JUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JUAppDelegate.m; sourceTree = "<group>"; };
+		8183798E18FCB29A0040D7BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8183799018FCB29A0040D7BE /* JUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JUViewController.h; sourceTree = "<group>"; };
+		8183799118FCB29A0040D7BE /* JUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JUViewController.m; sourceTree = "<group>"; };
+		8183799318FCB29A0040D7BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8183799918FCB29A0040D7BE /* MiMapaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiMapaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8183799A18FCB29A0040D7BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		818379A218FCB29A0040D7BE /* MiMapaAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiMapaAppTests-Info.plist"; sourceTree = "<group>"; };
+		818379A418FCB29A0040D7BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		818379A618FCB29A0040D7BE /* MiMapaAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiMapaAppTests.m; sourceTree = "<group>"; };
+		818379B018FCB3810040D7BE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8183797518FCB29A0040D7BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818379B118FCB3810040D7BE /* MapKit.framework in Frameworks */,
+				8183797E18FCB29A0040D7BE /* CoreGraphics.framework in Frameworks */,
+				8183798018FCB29A0040D7BE /* UIKit.framework in Frameworks */,
+				8183797C18FCB29A0040D7BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8183799618FCB29A0040D7BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8183799B18FCB29A0040D7BE /* XCTest.framework in Frameworks */,
+				8183799D18FCB29A0040D7BE /* UIKit.framework in Frameworks */,
+				8183799C18FCB29A0040D7BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8183796F18FCB29A0040D7BE = {
+			isa = PBXGroup;
+			children = (
+				8183798118FCB29A0040D7BE /* MiMapaApp */,
+				818379A018FCB29A0040D7BE /* MiMapaAppTests */,
+				8183797A18FCB29A0040D7BE /* Frameworks */,
+				8183797918FCB29A0040D7BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8183797918FCB29A0040D7BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8183797818FCB29A0040D7BE /* MiMapaApp.app */,
+				8183799918FCB29A0040D7BE /* MiMapaAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8183797A18FCB29A0040D7BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				818379B018FCB3810040D7BE /* MapKit.framework */,
+				8183797B18FCB29A0040D7BE /* Foundation.framework */,
+				8183797D18FCB29A0040D7BE /* CoreGraphics.framework */,
+				8183797F18FCB29A0040D7BE /* UIKit.framework */,
+				8183799A18FCB29A0040D7BE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8183798118FCB29A0040D7BE /* MiMapaApp */ = {
+			isa = PBXGroup;
+			children = (
+				8183798A18FCB29A0040D7BE /* JUAppDelegate.h */,
+				8183798B18FCB29A0040D7BE /* JUAppDelegate.m */,
+				8183798D18FCB29A0040D7BE /* Main.storyboard */,
+				8183799018FCB29A0040D7BE /* JUViewController.h */,
+				8183799118FCB29A0040D7BE /* JUViewController.m */,
+				8183799318FCB29A0040D7BE /* Images.xcassets */,
+				8183798218FCB29A0040D7BE /* Supporting Files */,
+			);
+			path = MiMapaApp;
+			sourceTree = "<group>";
+		};
+		8183798218FCB29A0040D7BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8183798318FCB29A0040D7BE /* MiMapaApp-Info.plist */,
+				8183798418FCB29A0040D7BE /* InfoPlist.strings */,
+				8183798718FCB29A0040D7BE /* main.m */,
+				8183798918FCB29A0040D7BE /* MiMapaApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		818379A018FCB29A0040D7BE /* MiMapaAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				818379A618FCB29A0040D7BE /* MiMapaAppTests.m */,
+				818379A118FCB29A0040D7BE /* Supporting Files */,
+			);
+			path = MiMapaAppTests;
+			sourceTree = "<group>";
+		};
+		818379A118FCB29A0040D7BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				818379A218FCB29A0040D7BE /* MiMapaAppTests-Info.plist */,
+				818379A318FCB29A0040D7BE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8183797718FCB29A0040D7BE /* MiMapaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 818379AA18FCB29A0040D7BE /* Build configuration list for PBXNativeTarget "MiMapaApp" */;
+			buildPhases = (
+				8183797418FCB29A0040D7BE /* Sources */,
+				8183797518FCB29A0040D7BE /* Frameworks */,
+				8183797618FCB29A0040D7BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiMapaApp;
+			productName = MiMapaApp;
+			productReference = 8183797818FCB29A0040D7BE /* MiMapaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8183799818FCB29A0040D7BE /* MiMapaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 818379AD18FCB29A0040D7BE /* Build configuration list for PBXNativeTarget "MiMapaAppTests" */;
+			buildPhases = (
+				8183799518FCB29A0040D7BE /* Sources */,
+				8183799618FCB29A0040D7BE /* Frameworks */,
+				8183799718FCB29A0040D7BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8183799F18FCB29A0040D7BE /* PBXTargetDependency */,
+			);
+			name = MiMapaAppTests;
+			productName = MiMapaAppTests;
+			productReference = 8183799918FCB29A0040D7BE /* MiMapaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8183797018FCB29A0040D7BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JU;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Area51;
+				TargetAttributes = {
+					8183799818FCB29A0040D7BE = {
+						TestTargetID = 8183797718FCB29A0040D7BE;
+					};
+				};
+			};
+			buildConfigurationList = 8183797318FCB29A0040D7BE /* Build configuration list for PBXProject "MiMapaApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8183796F18FCB29A0040D7BE;
+			productRefGroup = 8183797918FCB29A0040D7BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8183797718FCB29A0040D7BE /* MiMapaApp */,
+				8183799818FCB29A0040D7BE /* MiMapaAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8183797618FCB29A0040D7BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8183799418FCB29A0040D7BE /* Images.xcassets in Resources */,
+				8183798618FCB29A0040D7BE /* InfoPlist.strings in Resources */,
+				8183798F18FCB29A0040D7BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8183799718FCB29A0040D7BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818379A518FCB29A0040D7BE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8183797418FCB29A0040D7BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8183798818FCB29A0040D7BE /* main.m in Sources */,
+				8183799218FCB29A0040D7BE /* JUViewController.m in Sources */,
+				8183798C18FCB29A0040D7BE /* JUAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8183799518FCB29A0040D7BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818379A718FCB29A0040D7BE /* MiMapaAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8183799F18FCB29A0040D7BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8183797718FCB29A0040D7BE /* MiMapaApp */;
+			targetProxy = 8183799E18FCB29A0040D7BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8183798418FCB29A0040D7BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8183798518FCB29A0040D7BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8183798D18FCB29A0040D7BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8183798E18FCB29A0040D7BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		818379A318FCB29A0040D7BE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				818379A418FCB29A0040D7BE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		818379A818FCB29A0040D7BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		818379A918FCB29A0040D7BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		818379AB18FCB29A0040D7BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MiMapaApp/MiMapaApp-Prefix.pch";
+				INFOPLIST_FILE = "MiMapaApp/MiMapaApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		818379AC18FCB29A0040D7BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MiMapaApp/MiMapaApp-Prefix.pch";
+				INFOPLIST_FILE = "MiMapaApp/MiMapaApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		818379AE18FCB29A0040D7BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MiMapaApp.app/MiMapaApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MiMapaApp/MiMapaApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MiMapaAppTests/MiMapaAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		818379AF18FCB29A0040D7BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MiMapaApp.app/MiMapaApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MiMapaApp/MiMapaApp-Prefix.pch";
+				INFOPLIST_FILE = "MiMapaAppTests/MiMapaAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8183797318FCB29A0040D7BE /* Build configuration list for PBXProject "MiMapaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				818379A818FCB29A0040D7BE /* Debug */,
+				818379A918FCB29A0040D7BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		818379AA18FCB29A0040D7BE /* Build configuration list for PBXNativeTarget "MiMapaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				818379AB18FCB29A0040D7BE /* Debug */,
+				818379AC18FCB29A0040D7BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		818379AD18FCB29A0040D7BE /* Build configuration list for PBXNativeTarget "MiMapaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				818379AE18FCB29A0040D7BE /* Debug */,
+				818379AF18FCB29A0040D7BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8183797018FCB29A0040D7BE /* Project object */;
+}
